@@ -2,12 +2,17 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class MovieController extends Controller
 {
-    public function indexAction($name)
+
+    /**
+     * @Route("/movies/new", name="movies_new")
+     */
+    public function newAction($name)
     {
-        return $this->render('', array('name' => $name));
+        return $this->render('', array());
     }
 }
